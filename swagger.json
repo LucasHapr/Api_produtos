@@ -1,0 +1,151 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "API de Produtos",
+      "description": "CRUD de produtos com MongoDB",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://seu-dominio.com"
+      }
+    ],
+    "paths": {
+      "/produtos": {
+        "get": {
+          "summary": "Listar todos os produtos",
+          "responses": {
+            "200": {
+              "description": "Lista de produtos"
+            }
+          }
+        },
+        "post": {
+          "summary": "Cadastrar novo produto",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Produto"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Produto criado"
+            }
+          }
+        }
+      },
+      "/produtos/{id}": {
+        "get": {
+          "summary": "Buscar produto por ID",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Produto encontrado"
+            },
+            "404": {
+              "description": "Produto não encontrado"
+            }
+          }
+        },
+        "put": {
+          "summary": "Atualizar produto por ID",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Produto"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Produto atualizado"
+            }
+          }
+        },
+        "delete": {
+          "summary": "Deletar produto por ID",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Produto removido"
+            }
+          }
+        }
+      },
+      "/produtos/nome/{nome}": {
+        "get": {
+          "summary": "Buscar produto por nome",
+          "parameters": [
+            {
+              "name": "nome",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Produto encontrado"
+            },
+            "404": {
+              "description": "Produto não encontrado"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Produto": {
+          "type": "object",
+          "properties": {
+            "nome": { "type": "string" },
+            "descricao": { "type": "string" },
+            "cor": { "type": "string" },
+            "peso": { "type": "number" },
+            "tipo": { "type": "string" },
+            "preco": { "type": "number" },
+            "dataCadastro": { "type": "string", "format": "date-time" }
+          }
+        }
+      }
+    }
+  }  
