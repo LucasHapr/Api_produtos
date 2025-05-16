@@ -24,7 +24,13 @@ API desenvolvida para um desafio técnico de back-end, com foco na criação de 
 
 Acesse a documentação pública da API:
 
-👉 [https://api-produtos.onrender.com/api-docs](https://api-produtos.onrender.com/api-docs)
+👉 [https://api-produtos-j4o3.onrender.com/api-docs](https://api-produtos-j4o3.onrender.com/api-docs)
+
+
+## 🌐 URL base da API
+
+https://api-produtos-j4o3.onrender.com
+
 
 ## 🛠️ Como executar localmente
 
@@ -65,13 +71,3 @@ Acesse em: `http://localhost:3000/api-docs`
   "dataCadastro": "2025-05-12T19:00:00Z"
 }
 ```
-
-## 📘 Documentação Pública
-
-Acesse a documentação completa da API aqui:  
-👉 [https://api-produtos-j4o3.onrender.com/api-docs](https://api-produtos-j4o3.onrender.com/api-docs)
-
-## 🌐 URL base da API
-
-https://api-produtos-j4o3.onrender.com
-
