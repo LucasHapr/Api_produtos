@@ -36,7 +36,7 @@ https://api-produtos-j4o3.onrender.com
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/api-produtos.git
+git clone https://github.com/LucasHapr/Api_produtos.git
 cd api-produtos
 ```
 
